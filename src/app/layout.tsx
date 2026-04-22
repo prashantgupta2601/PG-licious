@@ -16,8 +16,24 @@ const notoSerif = Noto_Serif({
 });
 
 export const metadata: Metadata = {
-  title: "PG-licious Luxury Bakery",
-  description: "Indulgent Sophistication. Premium artisanal bakery.",
+  title: "PG-licious | Luxury Artisanal Bakery",
+  description: "Experience the finest artisanal pastries and bespoke cakes crafted with passion and elegance. Order online or design your own custom cake.",
+  keywords: "bakery, luxury cakes, artisanal pastries, custom cakes, wedding cakes",
+  openGraph: {
+    title: "PG-licious | Luxury Artisanal Bakery",
+    description: "Experience the finest artisanal pastries and bespoke cakes crafted with passion and elegance.",
+    url: "https://pg-licious.com",
+    siteName: "PG-licious Bakery",
+    images: [
+      {
+        url: "/images/hero_image.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
