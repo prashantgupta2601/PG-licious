@@ -1,0 +1,1 @@
+export default function FaqPage() { return (<main className="min-h-screen py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto"><h1 className="text-4xl font-serif font-bold text-primary mb-8">Faq</h1><div className="bg-white/60 backdrop-blur-md rounded-2xl p-8 shadow-sm border border-white/50"><p>Coming soon...</p></div></main>); }
