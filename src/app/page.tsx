@@ -1,10 +1,14 @@
+'use client';
 import { FadeIn, StaggerContainer, StaggerItem } from "@/components/ui/AnimationWrapper";
 import { Button } from "@/components/ui/Button";
 import { ProductCard } from "@/components/ui/ProductCard";
+import { useCartStore } from "@/lib/store";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
+  const { addItem } = useCartStore();
+
   return (
     <main className="min-h-screen pt-20">
       <section className="relative h-[80vh] flex items-center justify-center overflow-hidden">
@@ -55,6 +59,7 @@ export default function Home() {
               description="Layers of delicate vanilla sponge with a vibrant raspberry coulis and soft rose-infused mascarpone cream."
               price={12.50}
               imageUrl="/images/custom_cake.png"
+              onAddToCart={() => addItem({ id: '1', name: 'Velvet Raspberry Rose', price: 12.50, quantity: 1, imageUrl: '/images/custom_cake.png' })}
             />
           </StaggerItem>
           <StaggerItem>
@@ -63,6 +68,7 @@ export default function Home() {
               description="Intense dark chocolate mousse with a crunchy hazelnut praline base and a mirror-like ganache glaze."
               price={14.00}
               imageUrl="/images/hero_image.png"
+              onAddToCart={() => addItem({ id: '2', name: 'Midnight Chocolate Ganache', price: 14.00, quantity: 1, imageUrl: '/images/hero_image.png' })}
             />
           </StaggerItem>
           <StaggerItem>
@@ -71,6 +77,7 @@ export default function Home() {
               description="Classic choux pastry generously filled with a rich roasted pistachio cream and finished with crushed nuts."
               price={8.50}
               imageUrl="/images/custom_cake.png"
+              onAddToCart={() => addItem({ id: '3', name: 'Pistachio Éclair', price: 8.50, quantity: 1, imageUrl: '/images/custom_cake.png' })}
             />
           </StaggerItem>
         </StaggerContainer>
